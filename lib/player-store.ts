@@ -40,30 +40,34 @@ function setState(update: Partial<PlayerState>) {
   emit()
 }
 
-// Timer for progress simulation
-let progressInterval: ReturnType<typeof setInterval> | null = null
+// HTML5 Audio element for actual playback
+let audio: HTMLAudioElement | null = null
 
-function startProgressTimer() {
-  stopProgressTimer()
-  progressInterval = setInterval(() => {
-    if (state.currentTrack && state.isPlaying) {
-      const newTime = state.currentTime + 1
-      if (newTime >= state.currentTrack.duration) {
-        // Track ended
-        actions.next()
-      } else {
-        const newProgress = (newTime / state.currentTrack.duration) * 100
-        setState({ currentTime: newTime, progress: newProgress })
-      }
+// Initialize audio element
+if (typeof window !== "undefined") {
+  audio = new Audio()
+
+  // Set up event listeners
+  audio.addEventListener("timeupdate", () => {
+    if (state.currentTrack && audio) {
+      const newTime = Math.floor(audio.currentTime)
+      const newProgress = (audio.currentTime / state.currentTrack.duration) * 100
+      setState({ currentTime: newTime, progress: newProgress })
     }
-  }, 1000)
-}
+  })
 
-function stopProgressTimer() {
-  if (progressInterval) {
-    clearInterval(progressInterval)
-    progressInterval = null
-  }
+  audio.addEventListener("ended", () => {
+    actions.next()
+  })
+
+  audio.addEventListener("loadedmetadata", () => {
+    if (audio && state.isPlaying) {
+      audio.play().catch((err) => console.error("Playback failed:", err))
+    }
+  })
+
+  // Set initial volume
+  audio.volume = state.volume / 100
 }
 
 export const actions = {
@@ -76,7 +80,11 @@ export const actions = {
       progress: 0,
       currentTime: 0,
     })
-    startProgressTimer()
+    if (audio) {
+      audio.src = track.audioUrl
+      audio.currentTime = 0
+      audio.play().catch((err) => console.error("Playback failed:", err))
+    }
   },
 
   playAlbumOrPlaylist(tracks: Track[], startIndex = 0) {
@@ -89,16 +97,22 @@ export const actions = {
       progress: 0,
       currentTime: 0,
     })
-    startProgressTimer()
+    if (audio) {
+      audio.src = tracks[startIndex].audioUrl
+      audio.currentTime = 0
+      audio.play().catch((err) => console.error("Playback failed:", err))
+    }
   },
 
   togglePlay() {
     const newPlaying = !state.isPlaying
     setState({ isPlaying: newPlaying })
-    if (newPlaying) {
-      startProgressTimer()
-    } else {
-      stopProgressTimer()
+    if (audio) {
+      if (newPlaying) {
+        audio.play().catch((err) => console.error("Playback failed:", err))
+      } else {
+        audio.pause()
+      }
     }
   },
 
@@ -107,7 +121,10 @@ export const actions = {
 
     if (state.repeatMode === "one") {
       setState({ progress: 0, currentTime: 0 })
-      startProgressTimer()
+      if (audio) {
+        audio.currentTime = 0
+        audio.play().catch((err) => console.error("Playback failed:", err))
+      }
       return
     }
 
@@ -119,7 +136,9 @@ export const actions = {
         nextIndex = 0
       } else {
         setState({ isPlaying: false })
-        stopProgressTimer()
+        if (audio) {
+          audio.pause()
+        }
         return
       }
     }
@@ -131,12 +150,19 @@ export const actions = {
       currentTime: 0,
       isPlaying: true,
     })
-    startProgressTimer()
+    if (audio) {
+      audio.src = state.queue[nextIndex].audioUrl
+      audio.currentTime = 0
+      audio.play().catch((err) => console.error("Playback failed:", err))
+    }
   },
 
   previous() {
     if (state.currentTime > 3) {
       setState({ progress: 0, currentTime: 0 })
+      if (audio) {
+        audio.currentTime = 0
+      }
       return
     }
     if (state.queue.length === 0) return
@@ -151,17 +177,27 @@ export const actions = {
       currentTime: 0,
       isPlaying: true,
     })
-    startProgressTimer()
+    if (audio) {
+      audio.src = state.queue[prevIndex].audioUrl
+      audio.currentTime = 0
+      audio.play().catch((err) => console.error("Playback failed:", err))
+    }
   },
 
   seek(percent: number) {
     if (!state.currentTrack) return
-    const newTime = Math.floor((percent / 100) * state.currentTrack.duration)
-    setState({ progress: percent, currentTime: newTime })
+    const newTime = (percent / 100) * state.currentTrack.duration
+    setState({ progress: percent, currentTime: Math.floor(newTime) })
+    if (audio) {
+      audio.currentTime = newTime
+    }
   },
 
   setVolume(vol: number) {
     setState({ volume: vol })
+    if (audio) {
+      audio.volume = vol / 100
+    }
   },
 
   toggleShuffle() {

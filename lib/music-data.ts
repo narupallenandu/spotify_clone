@@ -6,6 +6,7 @@ export interface Track {
   albumId: string
   duration: number // seconds
   coverUrl: string
+  audioUrl: string // URL to the audio file
 }
 
 export interface Album {
@@ -35,11 +36,11 @@ export const albums: Album[] = [
     year: 2025,
     genre: "Electronic",
     tracks: [
-      { id: "t1", title: "Digital Sunrise", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 234, coverUrl: "/images/album-1.jpg" },
-      { id: "t2", title: "Pulse of the City", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 198, coverUrl: "/images/album-1.jpg" },
-      { id: "t3", title: "Midnight Drive", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 267, coverUrl: "/images/album-1.jpg" },
-      { id: "t4", title: "Electric Dreams", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 312, coverUrl: "/images/album-1.jpg" },
-      { id: "t5", title: "Starlight Run", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 245, coverUrl: "/images/album-1.jpg" },
+      { id: "t1", title: "Digital Sunrise", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 234, coverUrl: "/images/album-1.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+      { id: "t2", title: "Pulse of the City", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 198, coverUrl: "/images/album-1.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+      { id: "t3", title: "Midnight Drive", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 267, coverUrl: "/images/album-1.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+      { id: "t4", title: "Electric Dreams", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 312, coverUrl: "/images/album-1.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+      { id: "t5", title: "Starlight Run", artist: "Synthwave Collective", album: "Neon Horizons", albumId: "album-1", duration: 245, coverUrl: "/images/album-1.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
     ],
   },
   {
@@ -50,11 +51,11 @@ export const albums: Album[] = [
     year: 2024,
     genre: "Indie Pop",
     tracks: [
-      { id: "t6", title: "Sunset Boulevard", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 210, coverUrl: "/images/album-2.jpg" },
-      { id: "t7", title: "Ocean Breeze", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 185, coverUrl: "/images/album-2.jpg" },
-      { id: "t8", title: "Warm Glow", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 256, coverUrl: "/images/album-2.jpg" },
-      { id: "t9", title: "Amber Light", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 224, coverUrl: "/images/album-2.jpg" },
-      { id: "t10", title: "Dusk Serenade", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 290, coverUrl: "/images/album-2.jpg" },
+      { id: "t6", title: "Sunset Boulevard", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 210, coverUrl: "/images/album-2.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+      { id: "t7", title: "Ocean Breeze", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 185, coverUrl: "/images/album-2.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+      { id: "t8", title: "Warm Glow", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 256, coverUrl: "/images/album-2.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+      { id: "t9", title: "Amber Light", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 224, coverUrl: "/images/album-2.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+      { id: "t10", title: "Dusk Serenade", artist: "Marina Sol", album: "Golden Hour", albumId: "album-2", duration: 290, coverUrl: "/images/album-2.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" },
     ],
   },
   {
@@ -65,11 +66,11 @@ export const albums: Album[] = [
     year: 2025,
     genre: "Hip-Hop",
     tracks: [
-      { id: "t11", title: "Neon Streets", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 203, coverUrl: "/images/album-3.jpg" },
-      { id: "t12", title: "Rain Dance", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 178, coverUrl: "/images/album-3.jpg" },
-      { id: "t13", title: "Skyline Flow", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 241, coverUrl: "/images/album-3.jpg" },
-      { id: "t14", title: "Late Night Drive", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 195, coverUrl: "/images/album-3.jpg" },
-      { id: "t15", title: "Echo Chamber", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 220, coverUrl: "/images/album-3.jpg" },
+      { id: "t11", title: "Neon Streets", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 203, coverUrl: "/images/album-3.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+      { id: "t12", title: "Rain Dance", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 178, coverUrl: "/images/album-3.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+      { id: "t13", title: "Skyline Flow", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 241, coverUrl: "/images/album-3.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+      { id: "t14", title: "Late Night Drive", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 195, coverUrl: "/images/album-3.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+      { id: "t15", title: "Echo Chamber", artist: "Urban Echo", album: "City Lights", albumId: "album-3", duration: 220, coverUrl: "/images/album-3.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
     ],
   },
   {
@@ -80,11 +81,11 @@ export const albums: Album[] = [
     year: 2024,
     genre: "Lo-Fi",
     tracks: [
-      { id: "t16", title: "Floating Away", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 188, coverUrl: "/images/album-4.jpg" },
-      { id: "t17", title: "Cotton Clouds", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 215, coverUrl: "/images/album-4.jpg" },
-      { id: "t18", title: "Gentle Rain", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 242, coverUrl: "/images/album-4.jpg" },
-      { id: "t19", title: "Pastel Sky", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 167, coverUrl: "/images/album-4.jpg" },
-      { id: "t20", title: "Dream Sequence", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 278, coverUrl: "/images/album-4.jpg" },
+      { id: "t16", title: "Floating Away", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 188, coverUrl: "/images/album-4.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+      { id: "t17", title: "Cotton Clouds", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 215, coverUrl: "/images/album-4.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+      { id: "t18", title: "Gentle Rain", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 242, coverUrl: "/images/album-4.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+      { id: "t19", title: "Pastel Sky", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 167, coverUrl: "/images/album-4.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+      { id: "t20", title: "Dream Sequence", artist: "Daydream Society", album: "Cloud Atlas", albumId: "album-4", duration: 278, coverUrl: "/images/album-4.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" },
     ],
   },
   {
@@ -95,11 +96,11 @@ export const albums: Album[] = [
     year: 2025,
     genre: "Rock",
     tracks: [
-      { id: "t21", title: "Breaking Point", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 256, coverUrl: "/images/album-5.jpg" },
-      { id: "t22", title: "Edge of Chaos", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 312, coverUrl: "/images/album-5.jpg" },
-      { id: "t23", title: "Firestorm", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 198, coverUrl: "/images/album-5.jpg" },
-      { id: "t24", title: "Dark Matter", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 275, coverUrl: "/images/album-5.jpg" },
-      { id: "t25", title: "Aftershock", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 340, coverUrl: "/images/album-5.jpg" },
+      { id: "t21", title: "Breaking Point", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 256, coverUrl: "/images/album-5.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+      { id: "t22", title: "Edge of Chaos", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 312, coverUrl: "/images/album-5.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+      { id: "t23", title: "Firestorm", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 198, coverUrl: "/images/album-5.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+      { id: "t24", title: "Dark Matter", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 275, coverUrl: "/images/album-5.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+      { id: "t25", title: "Aftershock", artist: "Red Axis", album: "Shatter", albumId: "album-5", duration: 340, coverUrl: "/images/album-5.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
     ],
   },
   {
@@ -110,11 +111,11 @@ export const albums: Album[] = [
     year: 2024,
     genre: "World",
     tracks: [
-      { id: "t26", title: "Rainforest Dawn", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 302, coverUrl: "/images/album-6.jpg" },
-      { id: "t27", title: "River Song", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 228, coverUrl: "/images/album-6.jpg" },
-      { id: "t28", title: "Jungle Pulse", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 195, coverUrl: "/images/album-6.jpg" },
-      { id: "t29", title: "Golden Canopy", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 267, coverUrl: "/images/album-6.jpg" },
-      { id: "t30", title: "Ancient Roots", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 345, coverUrl: "/images/album-6.jpg" },
+      { id: "t26", title: "Rainforest Dawn", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 302, coverUrl: "/images/album-6.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+      { id: "t27", title: "River Song", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 228, coverUrl: "/images/album-6.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+      { id: "t28", title: "Jungle Pulse", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 195, coverUrl: "/images/album-6.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+      { id: "t29", title: "Golden Canopy", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 267, coverUrl: "/images/album-6.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+      { id: "t30", title: "Ancient Roots", artist: "Verdant", album: "Canopy", albumId: "album-6", duration: 345, coverUrl: "/images/album-6.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" },
     ],
   },
   {
@@ -125,11 +126,11 @@ export const albums: Album[] = [
     year: 2023,
     genre: "Soul",
     tracks: [
-      { id: "t31", title: "Groove Machine", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 234, coverUrl: "/images/album-7.jpg" },
-      { id: "t32", title: "Funky Feeling", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 289, coverUrl: "/images/album-7.jpg" },
-      { id: "t33", title: "Retro Love", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 198, coverUrl: "/images/album-7.jpg" },
-      { id: "t34", title: "Warm Tape", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 212, coverUrl: "/images/album-7.jpg" },
-      { id: "t35", title: "Vinyl Sunset", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 256, coverUrl: "/images/album-7.jpg" },
+      { id: "t31", title: "Groove Machine", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 234, coverUrl: "/images/album-7.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+      { id: "t32", title: "Funky Feeling", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 289, coverUrl: "/images/album-7.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+      { id: "t33", title: "Retro Love", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 198, coverUrl: "/images/album-7.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+      { id: "t34", title: "Warm Tape", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 212, coverUrl: "/images/album-7.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+      { id: "t35", title: "Vinyl Sunset", artist: "Soul Vinyl", album: "Analog Days", albumId: "album-7", duration: 256, coverUrl: "/images/album-7.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
     ],
   },
   {
@@ -140,11 +141,11 @@ export const albums: Album[] = [
     year: 2025,
     genre: "Synthwave",
     tracks: [
-      { id: "t36", title: "Digital Frontier", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 267, coverUrl: "/images/album-8.jpg" },
-      { id: "t37", title: "Cyber Chase", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 198, coverUrl: "/images/album-8.jpg" },
-      { id: "t38", title: "Neural Network", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 345, coverUrl: "/images/album-8.jpg" },
-      { id: "t39", title: "Hologram", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 223, coverUrl: "/images/album-8.jpg" },
-      { id: "t40", title: "Grid Runner", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 289, coverUrl: "/images/album-8.jpg" },
+      { id: "t36", title: "Digital Frontier", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 267, coverUrl: "/images/album-8.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+      { id: "t37", title: "Cyber Chase", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 198, coverUrl: "/images/album-8.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+      { id: "t38", title: "Neural Network", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 345, coverUrl: "/images/album-8.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+      { id: "t39", title: "Hologram", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 223, coverUrl: "/images/album-8.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+      { id: "t40", title: "Grid Runner", artist: "CyberPulse", album: "Neon Grid", albumId: "album-8", duration: 289, coverUrl: "/images/album-8.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" },
     ],
   },
   {
@@ -155,11 +156,11 @@ export const albums: Album[] = [
     year: 2024,
     genre: "Jazz",
     tracks: [
-      { id: "t41", title: "Blue Petals", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 356, coverUrl: "/images/album-9.jpg" },
-      { id: "t42", title: "Moonlit Garden", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 412, coverUrl: "/images/album-9.jpg" },
-      { id: "t43", title: "Silent Bloom", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 278, coverUrl: "/images/album-9.jpg" },
-      { id: "t44", title: "Nocturne", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 345, coverUrl: "/images/album-9.jpg" },
-      { id: "t45", title: "Last Petal", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 289, coverUrl: "/images/album-9.jpg" },
+      { id: "t41", title: "Blue Petals", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 356, coverUrl: "/images/album-9.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+      { id: "t42", title: "Moonlit Garden", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 412, coverUrl: "/images/album-9.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+      { id: "t43", title: "Silent Bloom", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 278, coverUrl: "/images/album-9.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+      { id: "t44", title: "Nocturne", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 345, coverUrl: "/images/album-9.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+      { id: "t45", title: "Last Petal", artist: "Midnight Jazz", album: "Bloom", albumId: "album-9", duration: 289, coverUrl: "/images/album-9.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
     ],
   },
   {
@@ -170,11 +171,11 @@ export const albums: Album[] = [
     year: 2025,
     genre: "Ambient",
     tracks: [
-      { id: "t46", title: "Base Camp", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 423, coverUrl: "/images/album-10.jpg" },
-      { id: "t47", title: "Frozen Ascent", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 367, coverUrl: "/images/album-10.jpg" },
-      { id: "t48", title: "Starfield", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 298, coverUrl: "/images/album-10.jpg" },
-      { id: "t49", title: "Peak", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 456, coverUrl: "/images/album-10.jpg" },
-      { id: "t50", title: "Descent", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 334, coverUrl: "/images/album-10.jpg" },
+      { id: "t46", title: "Base Camp", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 423, coverUrl: "/images/album-10.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+      { id: "t47", title: "Frozen Ascent", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 367, coverUrl: "/images/album-10.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+      { id: "t48", title: "Starfield", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 298, coverUrl: "/images/album-10.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+      { id: "t49", title: "Peak", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 456, coverUrl: "/images/album-10.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+      { id: "t50", title: "Descent", artist: "Altitude", album: "Summit", albumId: "album-10", duration: 334, coverUrl: "/images/album-10.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" },
     ],
   },
   {
@@ -185,11 +186,11 @@ export const albums: Album[] = [
     year: 2025,
     genre: "Pop",
     tracks: [
-      { id: "t51", title: "Bubblegum", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 189, coverUrl: "/images/album-11.jpg" },
-      { id: "t52", title: "Sugar Rush", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 204, coverUrl: "/images/album-11.jpg" },
-      { id: "t53", title: "Neon Crush", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 178, coverUrl: "/images/album-11.jpg" },
-      { id: "t54", title: "Electric Kiss", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 212, coverUrl: "/images/album-11.jpg" },
-      { id: "t55", title: "Sparkle", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 195, coverUrl: "/images/album-11.jpg" },
+      { id: "t51", title: "Bubblegum", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 189, coverUrl: "/images/album-11.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+      { id: "t52", title: "Sugar Rush", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 204, coverUrl: "/images/album-11.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+      { id: "t53", title: "Neon Crush", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 178, coverUrl: "/images/album-11.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+      { id: "t54", title: "Electric Kiss", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 212, coverUrl: "/images/album-11.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+      { id: "t55", title: "Sparkle", artist: "Fizzy Hearts", album: "Sunshine Pop", albumId: "album-11", duration: 195, coverUrl: "/images/album-11.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
     ],
   },
   {
@@ -200,11 +201,11 @@ export const albums: Album[] = [
     year: 2024,
     genre: "Folk",
     tracks: [
-      { id: "t56", title: "Morning Fog", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 278, coverUrl: "/images/album-12.jpg" },
-      { id: "t57", title: "Moss Path", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 245, coverUrl: "/images/album-12.jpg" },
-      { id: "t58", title: "Hollow Tree", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 312, coverUrl: "/images/album-12.jpg" },
-      { id: "t59", title: "Fern Valley", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 198, coverUrl: "/images/album-12.jpg" },
-      { id: "t60", title: "Twilight Trail", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 267, coverUrl: "/images/album-12.jpg" },
+      { id: "t56", title: "Morning Fog", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 278, coverUrl: "/images/album-12.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+      { id: "t57", title: "Moss Path", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 245, coverUrl: "/images/album-12.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+      { id: "t58", title: "Hollow Tree", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 312, coverUrl: "/images/album-12.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+      { id: "t59", title: "Fern Valley", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 198, coverUrl: "/images/album-12.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+      { id: "t60", title: "Twilight Trail", artist: "Forest Hymns", album: "Whisper Woods", albumId: "album-12", duration: 267, coverUrl: "/images/album-12.jpg", audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" },
     ],
   },
 ]
